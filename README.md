@@ -1,6 +1,6 @@
 # Mongoid::Bcrypt::Ruby
 
-TODO: Write a gem description
+Useful BCrypt::Password for Mongoid
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class User
+  include Mongoid::Document
+
+  field :password, type: BCrypt::Password
+end
+```
 
 ## Contributing
 
