@@ -9,7 +9,11 @@ module BCrypt
       end
 
       def demongoize(password)
-        self.new(password)
+        case password
+        when String then self.new(password)
+        when nil then nil
+        else password
+        end
       end
 
       def evolve(password)
