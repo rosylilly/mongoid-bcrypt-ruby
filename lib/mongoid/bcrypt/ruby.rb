@@ -5,7 +5,7 @@ module BCrypt
   class Password < String
     class << self
       def mongoize(password)
-        password.mongoize
+        create password.mongoize
       end
 
       def demongoize(password)
